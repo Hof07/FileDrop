@@ -8,7 +8,16 @@
     "scheme": "filedrop",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.hof.FileDrop",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocalNetworkUsageDescription": "FileDrop uses your local network to find nearby devices.",
+        "NSBonjourServices": [
+          "_touchdrop._tcp.",
+          "_touchdrop._tcp."
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +26,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.hof.FileDrop"
     },
     "web": {
       "output": "static",
@@ -37,6 +47,18 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ad241b8f-75d2-4a78-930c-b57356a1b21a"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ad241b8f-75d2-4a78-930c-b57356a1b21a"
     }
   }
 }
